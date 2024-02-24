@@ -1,0 +1,29 @@
+﻿<Window x:Class="TuristickaAgencijaWPF.Forme.FrmVrsta"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TuristickaAgencijaWPF.Forme"
+        mc:Ignorable="d"
+        Title="Vrsta putovanja" Height="200" Width="300" Background="MistyRose">
+    <Window.Resources>
+        <Style x:Key="Buttons" TargetType="Button">
+            <Setter Property="Background" Value="Transparent" ></Setter>
+            <Setter Property="FontSize" Value="14"></Setter>
+            <Setter Property="BorderThickness" Value="0"></Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+
+                    <Setter Property="Foreground" Value="Purple"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Label Content="Vrsta: " VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30,20,0,0"/>
+        <TextBox x:Name="txtVrsta" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="130,25,0,0" TextWrapping="Wrap" Text="" Width="120"/>
+        <Button Name="btnSacuvaj" Style="{StaticResource Buttons}" Content="Sačuvaj" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="24,102,0,0" Height="22" Click="btnSacuvaj_Click"/>
+        <Button Name="btnOtkazi" Style="{StaticResource Buttons}" Content="Otkaži" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="230,102,0,0" Height="22" Width="45" Click="btnOtkazi_Click"/>
+    </Grid>
+</Window>

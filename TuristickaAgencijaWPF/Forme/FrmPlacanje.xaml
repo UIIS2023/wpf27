@@ -1,0 +1,37 @@
+﻿<Window x:Class="TuristickaAgencijaWPF.Forme.FrmPlacanje"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TuristickaAgencijaWPF.Forme"
+        mc:Ignorable="d"
+        Title="Plaćanje" Height="310" Width="400" Background="MistyRose">
+    <Window.Resources>
+        <Style x:Key="Buttons" TargetType="Button">
+            <Setter Property="Background" Value="Transparent" ></Setter>
+            <Setter Property="FontSize" Value="14"></Setter>
+            <Setter Property="BorderThickness" Value="0"></Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+
+                    <Setter Property="Foreground" Value="Purple"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Label Content="Suma: " VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30,20,0,0"/>
+        <Label Content="Popust: " VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30,50,0,0"/>
+        <Label Content="Datum: " VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30,80,0,0"/>
+        <Label Content="Plaćeno: " VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30, 110, 0,0"/>
+        <Label Content="Putovanje: " VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30, 140,0,0"/>
+        <TextBox Name="txtSuma" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="130, 25, 0,0"  TextWrapping="Wrap" Text=" " Width="120"/>
+        <TextBox Name="txtPopust" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="130, 55, 0,0"  TextWrapping="Wrap" Text=" " Width="120"/>
+        <DatePicker Name="dpDatum" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="130, 81, 0,0"/>
+        <CheckBox Name="cbxPlaceno" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="130, 115" Content=" "/>
+        <ComboBox Name="cbPutovanje" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="130, 145, 0,0"  Width="120" DisplayMemberPath="Aranžman" SelectedValuePath="putovanjeID" />
+        <Button Name="btnSacuvaj" Style="{StaticResource Buttons}" Content="Sačuvaj" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30, 200, 0,0" Click="btnSacuvaj_Click_1"/>
+        <Button Name="btnOtkazi" Style="{StaticResource Buttons}" Content="Otkaži" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="320, 200,0,0" Click="btnOtkazi_Click"/>
+    </Grid>
+</Window>
